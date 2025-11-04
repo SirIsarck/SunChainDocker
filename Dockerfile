@@ -1,20 +1,14 @@
-# Use official Node.js image
 FROM node:20
 
-# Set working directory
 WORKDIR /app
 
-# Copy package.json and package-lock.json
 COPY package*.json ./
+RUN npm install --only=production
 
-# Install dependencies
-RUN npm install
-
-# Copy all source code
 COPY . .
 
-# Expose port
 EXPOSE 3000
 
-# Command to run app
-CMD ["npm", "run", "dev"]
+ENV NODE_ENV=production
+
+CMD ["npm", "start"]
