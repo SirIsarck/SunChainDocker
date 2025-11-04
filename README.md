@@ -51,7 +51,6 @@ This repo includes a **mock solar node** for hackathon validation.
 npm install
 npm start
 
-
 ## Docker Run
 
 docker build -t sunchain-node .
