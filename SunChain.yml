@@ -1,0 +1,62 @@
+version: 0.1
+
+services:
+  sunchain-node:
+    # Build Docker image from the Dockerfile in this repo
+    build:
+      context: .
+      dockerfile: Dockerfile
+    imagePullPolicy: Always
+
+    # Application environment variables
+    env:
+      - name: NODE_ENV
+        value: production
+      - name: APP_NAME
+        value: SunChain
+      - name: SOLANA_CLUSTER
+        value: mainnet-beta
+      - name: PORT
+        value: "3000"
+
+    # Ports to expose
+    ports:
+      - containerPort: 3000
+        protocol: TCP
+        expose: true
+
+    # Resource usage settings (CPU & Memory)
+    resourceUsage:
+      idle:
+        cpu: 250
+        memory: 512
+      max:
+        cpu: 1000
+        memory: 1024
+
+    # Health check configuration
+    healthCheck:
+      httpGet:
+        path: /
+        port: 3000
+      initialDelaySeconds: 5
+      periodSeconds: 30
+
+    # Command to start the app
+    command: ["npm", "start"]
+
+metadata:
+  name: SunChain Node
+  version: "1.0.0"
+  maintainer: "Isarck (@SirIsarck)"
+  description: "Solana DePIN micro-grid simulation node — Dockerized for hackathon deployment"
+  license: MIT
+  category: Energy / DePIN / Solana
+  source: "https://github.com/SirIsarck/SunChainDocker"
+  tutorial: "https://github.com/SirIsarck/SunChainDocker/blob/main/README.md"
+  tags:
+    - Solana
+    - DePIN
+    - Energy
+    - Docker
+    - Hackathon
