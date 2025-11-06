@@ -3,9 +3,7 @@ version: 0.1
 services:
   sunchainnode:
     # Build Docker image from the Dockerfile in this repo
-    build:
-      context: .
-      dockerfile: Dockerfile
+    image: [[insert your docker image here]] # it should look like this "julianapeace/spot-to-tidal:0.1"
     imagePullPolicy: Always
 
     # Application environment variables
@@ -41,9 +39,6 @@ services:
         port: 3000
       initialDelaySeconds: 5
       periodSeconds: 30
-
-    # Command to start the app
-    command: ["npm", "start"]
 
 metadata:
   name: SunChain Node
