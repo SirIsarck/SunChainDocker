@@ -1,7 +1,7 @@
 version: 0.1
 
 services:
-  sunchain-node:
+  sunchainnode:
     # Build Docker image from the Dockerfile in this repo
     build:
       context: .
