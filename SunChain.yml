@@ -1,5 +1,4 @@
 version: 0.1
-
 services:
   sunchainnode:
     # Build Docker image from the Dockerfile in this repo
