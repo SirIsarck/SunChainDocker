@@ -95,7 +95,7 @@ Payments	Solana Pay (USDC / SOL)
 Data Feed	Off-chain simulation → on-chain logs
 
 
-## Why Solana?
+** Why Solana?
 
 Ultra-low cost micro-transactions
 
