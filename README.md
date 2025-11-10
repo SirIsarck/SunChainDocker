@@ -95,7 +95,7 @@ Payments	Solana Pay (USDC / SOL)
 Data Feed	Off-chain simulation → on-chain logs
 
 
-** Why Solana?
+## Why Solana?
 
 Ultra-low cost micro-transactions
 
@@ -128,7 +128,9 @@ Stage	Goal
 - NFT station registry	
 - IoT firmware (ESP32)
 
+
 ## Reward Mechanism
+
 SunChain introduces a simulated on-chain reward model for DePIN energy nodes.  
 Each node earns **SCH (SunChain Tokens)** based on:
 - **Node Uptime:** Continuous operation time.
@@ -137,7 +139,7 @@ Each node earns **SCH (SunChain Tokens)** based on:
 
 Rewards are calculated and distributed through a smart-contract logic that can be adapted to Solana Mainnet in future versions.
 
-- **This demo illustrates how decentralized energy nodes can earn tokenized incentives for powering real-world infrastructure in the DePIN economy.
+** This demo illustrates how decentralized energy nodes can earn tokenized incentives for powering real-world infrastructure in the DePIN economy.
 
 
 ## Contribution
