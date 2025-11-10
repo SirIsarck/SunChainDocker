@@ -126,7 +126,18 @@ Stage	Goal
 - Anchor smart-contract release
 - Solana Pay wallet UI	
 - NFT station registry	
-- IoT firmware (ESP32)	
+- IoT firmware (ESP32)
+
+## Reward Mechanism
+SunChain introduces a simulated on-chain reward model for DePIN energy nodes.  
+Each node earns **SCH (SunChain Tokens)** based on:
+- **Node Uptime:** Continuous operation time.
+- **Data Accuracy:** Correct and verified energy readings.
+- **Energy Contribution:** Amount of simulated energy reported to the Solana network.
+
+Rewards are calculated and distributed through a smart-contract logic that can be adapted to Solana Mainnet in future versions.
+
+- **This demo illustrates how decentralized energy nodes can earn tokenized incentives for powering real-world infrastructure in the DePIN economy.
 
 
 ## Contribution
