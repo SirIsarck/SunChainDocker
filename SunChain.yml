@@ -2,10 +2,8 @@ version: 0.1
 
 services:
   sunchainnode:
-    # Using official Node.js image from Docker Hub
-    image: "node:20"
+    image: node:20
     imagePullPolicy: Always
-
     env:
       - name: NODE_ENV
         value: production
@@ -14,33 +12,46 @@ services:
       - name: SOLANA_CLUSTER
         value: mainnet-beta
       - name: PORT
-        value: "3000"
-
+        value: '3000'
     ports:
       - containerPort: 3000
         protocol: TCP
         expose: true
-
     resourceUsage:
       idle:
         cpu: 250
         memory: 512
-
-    # Start command for your app
-    command: ["npm", "start"]
-
+    command:
+      - npm
+      - start
 metadata:
   name: SunChain Node
-  version: "1.0.0"
-  maintainer: "Isarck (@SirIsarck)"
-  description: "Solana DePIN micro-grid simulation node — Dockerized for hackathon deployment"
+  version: 1.0.0
+  maintainer: Isarck (@SirIsarck)
+  description: >-
+    Solana DePIN micro-grid simulation node — demonstrates how decentralized
+    infrastructure nodes report data and receive on-chain rewards through the
+    SunChain token model.
   license: MIT
   category: Energy / DePIN / Solana
-  source: "https://github.com/SirIsarck/SunChainDocker"
-  tutorial: "https://github.com/SirIsarck/SunChainDocker/blob/main/README.md"
+  source: https://github.com/SirIsarck/SunChainDocker
+  tutorial: https://github.com/SirIsarck/SunChainDocker/blob/main/README.md
+
+  rewards:
+    type: Simulated
+    token: SCH
+    distributionLogic: Based on node uptime, accuracy, and energy data contribution
+    payoutFrequency: On-demand / Demo-based
+    blockchain: Solana
+    note: >-
+      This simulation showcases how DePIN nodes can earn on-chain incentives
+      using Solana smart contracts and tokenized energy credits.
+
   tags:
     - Solana
     - DePIN
     - Energy
     - Docker
     - Hackathon
+    - Rewards
+    - Incentives
