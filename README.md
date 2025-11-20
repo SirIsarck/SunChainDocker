@@ -53,8 +53,8 @@ npm start
 
 ## Docker Run
 
-docker build -t sunchain-node .
-docker run -p 3000:3000 sunchain-node
+docker build -t sunchainnode .
+docker run -p 3000:3000 sunchainnode
 
 Open browser:
 
@@ -145,6 +145,7 @@ Rewards are calculated and distributed through a smart-contract logic that can b
 ## Contribution
 
 PRs welcome — this is an open DePIN SOL energy model.
+
 
 
 ## How we want the Meter feature to work
@@ -333,7 +334,7 @@ Anchor reward logic
 Real-world pilot grid
 
 
- **SunChain is creating the future of community-powered energy.
+- SunChain is creating the future of community-powered energy.
 
 
 ## Contact
