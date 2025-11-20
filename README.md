@@ -45,7 +45,7 @@ This repo includes a **mock solar node** for hackathon validation.
 
 ## Installation
 
-### **Local Run**
+- Local Run
 
 ```bash
 npm install
